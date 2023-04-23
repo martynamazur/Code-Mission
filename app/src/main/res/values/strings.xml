@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">nauka</string>
+    <string name="user">Użytkownik</string>
+    <string name="play">Graj</string>
+    <string name="leaderboard">Tablica WYnikow</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="home">Home</string>
+
+</resources>

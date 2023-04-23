@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    // definiuje styl
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:paddingTop">18dp</item>
+
+        <item name="android:windowBackground">@color/background_color</item>
+
+
+    </style>
+    <style name="TableButtonStyle">
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+
+
+</resources>

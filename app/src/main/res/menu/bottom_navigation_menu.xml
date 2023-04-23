@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_bookmarks"
+        android:icon="@drawable/bookmarks"
+        android:title="@string/bookmarks" />
+
+    <item
+        android:id="@+id/nav_play"
+        android:icon="@drawable/play"
+        android:title="@string/play" />
+
+    <item
+
+        android:id="@+id/nav_leaderboard"
+        android:icon="@drawable/leader_board"
+        android:title="@string/leaderboard"
+        />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/user"
+        android:title="@string/user"
+
+        />
+
+</menu>

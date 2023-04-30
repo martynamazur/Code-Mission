@@ -11,7 +11,7 @@ public class Connect {
     public void connect() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/uzytkownicy", "root", "student");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codemission", "root", "student");
         } catch (Exception e) {
             e.printStackTrace();
         }

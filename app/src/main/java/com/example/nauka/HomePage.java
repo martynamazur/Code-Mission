@@ -3,13 +3,14 @@ package com.example.nauka;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class HomePage extends BaseNavigationActivity {
+public class HomePage extends AppCompatActivity {
     private RecyclerView recyclerView;
 
 
@@ -33,50 +34,6 @@ public class HomePage extends BaseNavigationActivity {
         recyclerView.setAdapter(adapter);
         System.out.println("hejka 5");
 
-
-
-    }
-    @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_main;
-    }
-
-    @Override
-    protected int getBottomNavigationViewId() {
-        return R.id.bottom_navigation_view;
-    }
-
-    @Override
-    protected Fragment getHomeFragment() {
-        return new HomeFragment();
-    }
-
-    @Override
-    protected Fragment getBookmarksFragment() {
-        return new BookmarksFragment();
-    }
-
-    @Override
-    protected Fragment getPlayFragment() {
-        return new PlayFragment();
-    }
-
-
-
-    @Override
-    protected Fragment getProfileFragment() {
-        return new ProfileFragment();
-    }
-
-    @Override
-    protected Fragment getLeaderBoardFragment() {
-        System.out.println("hehe test");
-        return new LeaderboardFragment();
-    }
-
-    @Override
-    protected int getFragmentContainerId() {
-        return R.id.fragment_container;
     }
 
 }

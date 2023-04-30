@@ -1,45 +1,47 @@
 package com.example.nauka;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public abstract class BaseNavigationActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResourceId());
+        setContentView(R.layout.activity_main);
 
-        bottomNavigationView = findViewById(getBottomNavigationViewId());
+        bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @SuppressLint("NonConstantResourceId")
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.nav_home:
-                                showFragment(getHomeFragment());
+                                showFragment(new HomeFragment());
                                 return true;
                             case R.id.nav_bookmarks:
-                                showFragment(getBookmarksFragment());
+                                showFragment(new BookmarksFragment());
                                 return true;
                             case R.id.nav_play:
-                                showFragment(getPlayFragment());
+                                showFragment(new PlayFragment());
                                 return true;
                             case R.id.nav_leaderboard:
                                 Intent intent = new Intent(BaseNavigationActivity.this, LeaderBoard.class);
                                 startActivity(intent);
-                                showFragment(getLeaderBoardFragment());
                                 return true;
                             case R.id.nav_profile:
-                                showFragment(getProfileFragment());
+                                showFragment(new ProfileFragment());
                                 return true;
                         }
                         return false;
@@ -47,7 +49,14 @@ public abstract class BaseNavigationActivity extends AppCompatActivity {
                 });
 
         // Wywołanie domyślnego fragmentu
-        showFragment(getHomeFragment());
+        showFragment(new HomeFragment());
+    }
+
+    protected void showFragment(Fragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 
     protected abstract int getLayoutResourceId();
@@ -61,14 +70,8 @@ public abstract class BaseNavigationActivity extends AppCompatActivity {
     protected abstract Fragment getPlayFragment();
 
     protected abstract Fragment getProfileFragment();
-    protected abstract Fragment getLeaderBoardFragment();
 
-    protected void showFragment(Fragment fragment) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(getFragmentContainerId(), fragment)
-                .commit();
-    }
+    protected abstract Fragment getLeaderBoardFragment();
 
     protected abstract int getFragmentContainerId();
 }

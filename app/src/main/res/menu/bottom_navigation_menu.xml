@@ -2,29 +2,29 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/domek"
         android:title="@string/home" />
 
     <item
         android:id="@+id/nav_bookmarks"
-        android:icon="@drawable/bookmarks"
+        android:icon="@drawable/ribbon"
         android:title="@string/bookmarks" />
 
     <item
         android:id="@+id/nav_play"
-        android:icon="@drawable/play"
+        android:icon="@drawable/saturn"
         android:title="@string/play" />
 
     <item
 
         android:id="@+id/nav_leaderboard"
-        android:icon="@drawable/leader_board"
+        android:icon="@drawable/trophy"
         android:title="@string/leaderboard"
         />
 
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/user"
+        android:icon="@drawable/myprofile"
         android:title="@string/user"
 
         />

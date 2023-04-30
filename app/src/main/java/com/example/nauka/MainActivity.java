@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends BaseNavigationActivity {
+public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -26,47 +26,6 @@ public class MainActivity extends BaseNavigationActivity {
 
     }
 
-    @Override
-    protected int getLayoutResourceId() {
-        return R.layout.activity_main;
-    }
-
-    @Override
-    protected int getBottomNavigationViewId() {
-        return R.id.bottom_navigation_view;
-    }
-
-    @Override
-    protected Fragment getHomeFragment() {
-        return new HomeFragment();
-    }
-
-    @Override
-    protected Fragment getBookmarksFragment() {
-        return new BookmarksFragment();
-    }
-
-    @Override
-    protected Fragment getPlayFragment() {
-        return new PlayFragment();
-    }
-
-
-    @Override
-    protected Fragment getProfileFragment() {
-        return new ProfileFragment();
-    }
-
-    @Override
-    protected Fragment getLeaderBoardFragment() {
-        System.out.println("TU COS DZIALA");
-        return null;
-    }
-
-    @Override
-    protected int getFragmentContainerId() {
-        return R.id.fragment_container;
-    }
 
     @SuppressLint("SetTextI18n")
     public void onBtnClick(View view){

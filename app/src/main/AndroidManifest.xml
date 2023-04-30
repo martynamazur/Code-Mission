@@ -31,6 +31,7 @@
         <activity android:name=".ChangePasswordNewPass"/>
         <activity android:name=".HomePage"/>
         <activity android:name=".LeaderBoard"/>
+        <activity android:name=".MyProfile2"/>
 
 
 

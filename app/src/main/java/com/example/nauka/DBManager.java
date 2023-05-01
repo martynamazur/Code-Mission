@@ -6,22 +6,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBManager {
-    private Connection connection;
-    private Connect connect;
+    private final Connection connection;
+
 
     //konstruktor
     public DBManager(Connection connection) {
         this.connection = connection;
     }
 
-    public DBManager(Connect connect) {
-        this.connect = connect;
-    }
+
 
 
 
     public boolean findUser(String email, String hash){
-        String query = "SELECT EXISTS(SELECT 1 FROM informacje WHERE email = ? OR login = ?) as result;";
+        String query = "SELECT EXISTS(SELECT 1 FROM informacje WHERE email = ? OR login = ? ) as result;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             // w miejsce ? wstawiam odpowiednie wartosci zmiennych i nie musze sie martwic
@@ -41,13 +39,9 @@ public class DBManager {
 
     public boolean doesUserExist(String information){
 
-        Connection connection = connect.getConnection();
-        if (connection == null) {
-            System.out.println("Connection is null");
-            return false;
-        }
+        String query = "SELECT * FROM informacje WHERE email = ? OR login= ? ;";
 
-        String query = "SELECT COUNT(*) > 0 As result FROM informacje WHERE email = ? OR login= ? ;";
+
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, information);
@@ -56,17 +50,16 @@ public class DBManager {
             System.out.println("Połączenie z bazą danych zostało nawiązane poprawnie.");
             // next zwraca true, lub false jesli istnieje kolejny element
             // jesli jest rozne oznacza ze nie ma niczego
-            if (!resultSet.next()) {
-
-                return false;
-            } else {
-                return true;
-            }
+            return resultSet.next();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
 
 
-}}
+}
+
+
+
+}
 

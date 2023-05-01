@@ -5,5 +5,19 @@
     <string name="leaderboard">Tablica WYnikow</string>
     <string name="bookmarks">Bookmarks</string>
     <string name="home">Home</string>
+    <string name="Registration">Registration</string>
+    <string name="errorMessage">Konto o podanym adresie e-mail już istnieje</string>
+    <string name="HintPassword">Haslo</string>
+    <string name="HintEmail">Adres Email</string>
+    <string name="HintRepeatPassword">Powtorz haslo</string>
+    <string name="PasswordRequirments">Haslo musi zawierać :</string>
+    <string name="PrivacyPolicy">Korzystając z naszej aplikacji, zobowiązujesz się do przestrzegania jej regulaminu. Regulamin określa zasady korzystania z aplikacji oraz Twoje prawa i obowiązki jako użytkownika.</string>
+    <string name="Newsletter" />
+    <string name="NewsletterAgreement">"Chcę otrzymywać informacje i wiadomości newsletter "</string>
+    <string name="errorPrivacyPolicyAgreement">"Warunkiem koniecznym jest akceptacka regulaminu !" </string>
+    <string name="PasswordRequirmentsLength">Minimum 8 znaków</string>
+    <string name="PasswordRequirmentsLetter">Mała i wielka litera</string>
+    <string name="PasswordREquirmentsNumber">Minimum jedna cyfra</string>
+    <string name="PasswordRequirmentsSpecialSign">Znak specjalny (np. @)</string>>
 
 </resources>

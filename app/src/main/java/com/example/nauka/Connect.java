@@ -1,8 +1,10 @@
 package com.example.nauka;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Connect {
 
@@ -10,12 +12,14 @@ public class Connect {
 
     public void connect() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/codemission", "root", "student");
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection("jdbc:sqlite:identifier.sqlite");
+            System.out.println("Connected to SQLite database.");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
     public void disconnect() {
         try {
@@ -30,10 +34,4 @@ public class Connect {
     public Connection getConnection() {
         return connection;
     }
-
-
 }
-
-
-
-

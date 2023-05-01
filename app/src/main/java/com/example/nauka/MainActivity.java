@@ -9,25 +9,45 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button btnZaloguj;
+    Button btnZarejestruj;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnZaloguj = findViewById(R.id.btnZaloguj);
-        Button btnZarejestruj = findViewById(R.id.btnZarejestruj);
+        btnZaloguj = findViewById(R.id.btnZaloguj);
+        btnZarejestruj = findViewById(R.id.btnZarejestruj);
         btnZaloguj.setText("Zaloguj mnie");
         btnZarejestruj.setText("Zarejestruj mnie");
         TextView txt = findViewById(R.id.textView2);
         txt.setText("Hello fucking world");
 
+        btnZarejestruj.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this,SignUp.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    System.out.println("blad");
+                    e.printStackTrace();
+
+                }
+
+            }
+
+        });
+
     }
 
 
-    @SuppressLint("SetTextI18n")
     public void onBtnClick(View view){
 
         //TextView txt = findViewById(R.id.textView2);
@@ -46,4 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 }

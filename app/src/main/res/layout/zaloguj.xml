@@ -3,55 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/singinpage"
+    android:scaleType="centerCrop">
 
     <LinearLayout
-        android:theme="@style/AppTheme"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#232323"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3">
 
+
         <TextView
-            android:id="@+id/email"
+            android:id="@+id/textViewLogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#B5B5B5"/>
+            android:textSize="32dp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:text="@string/AppLogoHeadline" />
+
+        <TextView
+            android:id="@+id/textViewSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitleApp" />
 
         <EditText
             android:id="@+id/editEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#B5B5B5"
             android:ems="10"
-            android:textColor="#B5B5B5"
+            android:hint="@string/HintEmail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:backgroundTint="#B5B5B5"/>
+            android:textColor="#B5B5B5"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/editPassoword"
+            android:id="@+id/messageisEmailExists"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#B5B5B5"/>
+            android:text="@string/SingInEmailisExists" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#B5B5B5"
             android:ems="10"
-            android:inputType="numberPassword"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:hint="@string/HintPassword"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/messageisPasswordRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/messageValidationPassword" />
 
         <Button
             android:id="@+id/btnSignIn"
@@ -68,16 +81,16 @@
             android:id="@+id/forgottenPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:minHeight="48dp"
             android:onClick="resetPassword"
-            android:textColor="#B5B5B5"
-            />
+            android:text="@string/ForgottenPasswordReset"
+            android:textColor="#B5B5B5" />
 
         <TextView
             android:id="@+id/continueGoogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/ContinuewithGoogle" />
 
         <TextView
             android:id="@+id/continueFb"

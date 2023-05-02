@@ -18,6 +18,19 @@
     <string name="PasswordRequirmentsLength">Minimum 8 znaków</string>
     <string name="PasswordRequirmentsLetter">Mała i wielka litera</string>
     <string name="PasswordREquirmentsNumber">Minimum jedna cyfra</string>
-    <string name="PasswordRequirmentsSpecialSign">Znak specjalny (np. @)</string>>
+    <string name="PasswordRequirmentsSpecialSign">Znak specjalny (np. @)</string>
+    <string name="SignUpBtnAction">Zarejestruj</string>
+    <string name="btnSignUp">Zarejestruj</string>
+    <string name="btnNextVerify">Potwierdz</string>
+    <string name="btnSendCodeAgain">Wyślij kod ponownie</string>
+    <string name="VerificationSucces">Weryfikacja się powiodła</string>
+    <string name="btnNextNavigation">Dalej</string>
+    <string name="AppLogoHeadline">CodeMission</string>
+    <string name="subtitleApp">Wyrusz w niesamowitą podróż.</string>
+    <string name="ForgottenPasswordReset">Zapomniałeś hasała ?</string>
+    <string name="ContinuewithGoogle">Kontynuuj z Google</string>
+    <string name="ContinuewithFacebook">Kontynuuj z Facebook</string>
+    <string name="SingInEmailisExists">Nie ma takiego konta</string>
+    <string name="messageValidationPassword">Hasło jest nie poprawne.</string>>
 
 </resources>

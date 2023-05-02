@@ -6,13 +6,13 @@ import java.util.Objects;
 
 public class SingUp_DataValidation {
 
-    private String email_adress;
-    private String password;
-    private String reapeatPassword;
-   private CheckBox newsletter;
-    private CheckBox privacyPolicy;
+     String email_adress;
+     String password;
+     String reapeatPassword;
+     boolean newsletter;
+     boolean privacyPolicy;
 
-    public SingUp_DataValidation(String email_adress, String password, String reapeatPassword, CheckBox newsletter, CheckBox privacyPolicy) {
+    public SingUp_DataValidation(String email_adress, String password, String reapeatPassword, Boolean newsletter, Boolean privacyPolicy) {
         this.email_adress = email_adress;
         this.password = password;
         this.reapeatPassword = reapeatPassword;
@@ -20,8 +20,13 @@ public class SingUp_DataValidation {
         this.privacyPolicy = privacyPolicy;
     }
 
+    public SingUp_DataValidation(String email_adress, String password) {
+        this.email_adress = email_adress;
+        this.password = password;
+    }
+
     public boolean isPrivacyPolicyChecked(){
-        return privacyPolicy.isChecked();
+        return privacyPolicy;
     }
 
     public boolean isPasswordTheSame(){
@@ -48,6 +53,65 @@ public class SingUp_DataValidation {
             }
     }
         return false;
-}}
+}
+    public  boolean isContainSmallLetter(){
+
+        for (char c : password.toCharArray()){
+            if (Character.isLowerCase(c)){
+                return true;
+            }
+        }
+        return false;
+
+
+}
+
+    public  boolean isContainNumber(){
+
+        for (char c : password.toCharArray()){
+            if (Character.isDigit(c)){
+                return true;
+            }
+        }
+        return false;
+
+
+    }
+    public boolean isContainSpecialSign() {
+        String specialChars = "@#%^&+=!";
+        for (char c : password.toCharArray()) {
+            if (specialChars.indexOf(c) != -1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isRequiredLength(){
+        return password.length() >= 8;
+    }
+
+    // ten koncowy po kliknieciu
+    public boolean passwordValidation(String password) {
+        String pattern = "(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#%^&+=!])(?=\\S+$).{8,}";
+        return password.matches(pattern);
+    }
+
+
+    public boolean correctInformation(){
+        boolean isContainBigLetter = isContainBigLetter();
+        boolean isContainSmallLetter = isContainSmallLetter();
+        boolean isContainNumber = isContainNumber();
+        boolean isContainSpecialSign = isContainSpecialSign();
+        boolean isRequiredLength = isRequiredLength();
+        boolean isPrivacyPolicy = isPrivacyPolicyChecked();
+
+        //dopisac aby wysiwetlaly sie odpowiednie komunikaty jesli cos nie zostanie spelnione
+
+        return isContainBigLetter && isContainSmallLetter && isContainNumber && isContainSpecialSign && isRequiredLength && isPrivacyPolicy;
+    }
+
+
+}
 
 

@@ -72,14 +72,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/errorPrivacyPolicy"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSignUpNext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:background="@drawable/primary_button_background"
+        android:text="@string/btnSignUp"
+        android:textColor="@color/primary_button_text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

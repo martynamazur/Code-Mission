@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,23 +22,21 @@ public class Zaloguj extends AppCompatActivity {
     String email;
     String password;
 
+    Button btnZaloguj;
+    EditText editPassword;
+    EditText editEmail;
 
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.zaloguj);
 
-        TextView txtEmail =  findViewById(R.id.email);
-        txtEmail.setText("Email: ");
-        EditText editEmail = findViewById(R.id.editEmail);
 
-        TextView txtPassowrd = findViewById(R.id.editPassoword);
-        txtPassowrd.setText("Password: ");
-        EditText editPassword = findViewById(R.id.password);
+        editEmail = findViewById(R.id.editEmail);
+        editPassword = findViewById(R.id.password);
 
 
-
-        Button btnZaloguj = findViewById(R.id.btnSignIn);
+        btnZaloguj = findViewById(R.id.btnSignIn);
         //Button btnZarejestruj = findViewById(R.id.btnCreateAccount);
         btnZaloguj.setText("Zaloguj");
         TextView forgottenPassword = findViewById(R.id.forgottenPassword);
@@ -60,33 +59,47 @@ public class Zaloguj extends AppCompatActivity {
         String password ="$2a$10$zG6W5R8erFGc2n1lEY5b5el1MJSEeLx40yoPfA24Mn2DngB8mtvAy";
         //HashPassword hp = new HashPassword(password);
 
-        /*
-        Connect connect = new Connect();
-        connect.connect();
-        Connection connection = connect.getConnection();
-        DBManager dbManager = new DBManager(connection);
+
+
+        btnZaloguj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //SingUp_DataValidation singUp_dataValidation = new SingUp_DataValidation(editEmail.getText().toString(),editPassword.getText().toString());
+                DataBaseHelper db = new DataBaseHelper(Zaloguj.this);
+                if(db.isEmailExists(editEmail.getText().toString())){
 
 
 
-        if(dbManager.findUser(email,password)){
-            // jesli zwroci true idze do kolejnej aktywnosci
-            Intent intent = new Intent(this, HomePage.class);
-            startActivity(intent);
-            System.out.println("tutu");
-            //jesli nie to wraca i wyswietla ostzrezenie
-        }else{
-            Snackbar.make(view,"Błędne dane logowania !", Snackbar.LENGTH_SHORT).show();
-        }
+                    if (db.singInValidation(editPassword.getText().toString(),editEmail.getText().toString())){
 
-         */
+                        System.out.println(editEmail.getText().toString() +""+editPassword.getText().toString());
+                        try{
+                            Intent intent = new Intent(Zaloguj.this,HomePage.class);
+                            startActivity(intent);
+                        }catch (Exception e)
+                        {
+                            System.out.println("ups");
+                        }
 
-        try{
-            Intent intent = new Intent(this,HomePage.class);
-            startActivity(intent);
-        }catch (Exception e)
-        {
-            System.out.println("ups");
-        }
+                    }else{
+                        System.out.println("nie poprawne haslo");
+                        System.out.println(editPassword.getText().toString());
+                        // wyswietlic komunikat, zmienic widocznosc
+                    }
+
+                }else{
+                    System.out.println("konto nie istnieje");
+                    System.out.println(editEmail.getText().toString());
+                    System.out.println(editPassword.getText().toString());
+                    // wyswietlic komunikat, zmienic widocznosc
+                }
+
+
+
+            }
+        });
+
 
         // validacja wpisanych danych
         // funckja spr czy taki uzytkownik istnieje

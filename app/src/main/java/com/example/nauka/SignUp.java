@@ -1,19 +1,25 @@
 package com.example.nauka;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.PasswordTransformationMethod;
+import android.text.method.SingleLineTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 
 public class SignUp extends AppCompatActivity {
 
@@ -38,6 +44,9 @@ public class SignUp extends AppCompatActivity {
     Button signUpbtn;
 
     int validationPass;
+    DataBaseHelper dataBaseHelper;
+    SingUp_DataValidation singUp_dataValidation;
+
 
 
     @Override
@@ -58,11 +67,13 @@ public class SignUp extends AppCompatActivity {
         tvSpecialSign = findViewById(R.id.tvSpecialSign);
 
         signUpbtn = findViewById(R.id.btnSignUpNext);
+        errorEmail = findViewById(R.id.errorEmail);
+        errorPrivacyPolicy = findViewById(R.id.errorPrivacyPolicy);
+
 
 
         //zaimplementowac metode ktora czy validacji danych zmieni widocznosc
-        //errorEmail.setVisibility(View.INVISIBLE);
-        //errorPrivacyPolicy.setVisibility(View.INVISIBLE);
+
 
 
         editTextPassword.addTextChangedListener(new TextWatcher() {
@@ -76,7 +87,7 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                SingUp_DataValidation singUp_dataValidation = new SingUp_DataValidation(
+                singUp_dataValidation = new SingUp_DataValidation(
                         editTextEmail.getText().toString(),
                         editTextPassword.getText().toString(),
                         editTextRepeatPassword.getText().toString(),
@@ -112,43 +123,67 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+
+
+
         signUpbtn.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+
+             // przed tym musi mi funckja zwrocic czy wszystko co chcialam jest zaznaczone
+             //do implementacji
+
+             SingUp_DataValidation singUp_dataValidation = new SingUp_DataValidation(
+                     editTextEmail.getText().toString(),
+                     editTextPassword.getText().toString(),
+                     editTextRepeatPassword.getText().toString(),
+                     newsletterAgreement.isChecked(),
+                     privatePolicyAgreement.isChecked()
+             );
+
+             if (singUp_dataValidation.correctInformation()) {
+
+                 SinUp_UserModel sinUp_userModel = new SinUp_UserModel(editTextEmail.getText().toString(), editTextPassword.getText().toString(), newsletterAgreement, privatePolicyAgreement);
+                 dataBaseHelper = new DataBaseHelper(SignUp.this);
+
+
+                 boolean b = dataBaseHelper.addOne(sinUp_userModel);
+                 Toast.makeText(SignUp.this, "Success=" + b, Toast.LENGTH_SHORT).show();
+
+
+                 Intent intent = new Intent(SignUp.this, AccountVerification.class);
+                 startActivity(intent);
+             }
+
+         }
+
+    });
+
+
+        editTextPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // przed tym musi mi funckja zwrocic czy wszystko co chcialam jest zaznaczone
-                //do implementacji
-
-                SingUp_DataValidation singUp_dataValidation = new SingUp_DataValidation(
-                        editTextEmail.getText().toString(),
-                        editTextPassword.getText().toString(),
-                        editTextRepeatPassword.getText().toString(),
-                        newsletterAgreement.isChecked(),
-                        privatePolicyAgreement.isChecked()
-                );
-
-                if (singUp_dataValidation.correctInformation()){
-
-                    SinUp_UserModel sinUp_userModel = new SinUp_UserModel(editTextEmail.getText().toString(),editTextPassword.getText().toString(), newsletterAgreement,privatePolicyAgreement);
-                    DataBaseHelper dataBaseHelper = new DataBaseHelper(SignUp.this);
-
-
-                    boolean b = dataBaseHelper.addOne(sinUp_userModel);
-                    Toast.makeText(SignUp.this, "Success="+b, Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(SignUp.this, AccountVerification.class);
-                    startActivity(intent);
+                // Sprawdź aktualny stan widoku
+                if (editTextPassword.isSelected()) {
+                    // Hasło jest widoczne, więc zmień na ukryte
+                    editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                } else {
+                    // Hasło jest ukryte, więc zmień na widoczne
+                    editTextPassword.setTransformationMethod(SingleLineTransformationMethod.getInstance());
                 }
 
-
-
+                // Zmień stan widoku
+                editTextPassword.setSelected(!editTextPassword.isSelected());
             }
         });
 
 
+
+
+
+
+
     }
-
-
 
 
 }

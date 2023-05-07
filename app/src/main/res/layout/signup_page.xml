@@ -2,81 +2,120 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+
+
+    >
 
     <EditText
+
         android:id="@+id/editTextEmail"
+        style="@style/margin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/edit_text_border"
         android:ems="10"
         android:hint="@string/HintEmail"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
+
+        android:minHeight="46dp"
+        android:paddingLeft="18dp"
+        android:textColorHint="@color/formText"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+
+        android:textStyle="bold"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtxVRegistrion"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <EditText
+
         android:id="@+id/editTextPassword"
-        android:layout_width="0dp"
+        style="@style/margin"
+        android:layout_width="371dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:drawableRight="@drawable/eye_icon_selector"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/icon_tint"
         android:ems="10"
         android:hint="@string/HintPassword"
         android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:minHeight="46dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+
+
+        android:textColorHint="@color/formText"
+        android:textColor="@android:color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/errorEmail"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.335" />
 
     <EditText
         android:id="@+id/editTextRepeatPassword"
+        style="@style/margin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
         android:ems="10"
         android:hint="@string/HintRepeatPassword"
         android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:minHeight="46dp"
+        android:paddingLeft="18dp"
+        android:textColorHint="@color/formText"
+        android:textColor="@android:color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.597" />
 
     <CheckBox
         android:id="@+id/newsletterAgreement"
+        style="@style/margin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:minHeight="48dp"
         android:text="@string/NewsletterAgreement"
+        android:textColor="@color/formText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/privatePolicyAgreement"
         app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/privatePolicyAgreement"
-        android:layout_width="wrap_content"
+        style="@style/margin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/PrivacyPolicy"
+        android:textColor="@color/formText"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.761" />
 
     <Button
         android:id="@+id/btnSignUpNext"
+        style="@style/margin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/primary_button_background"
@@ -84,16 +123,18 @@
         android:textColor="@color/primary_button_text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <TextView
         android:id="@+id/txtxVRegistrion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Registration"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/registrationForm"
+        android:textColor="@color/headline"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,101 +144,125 @@
 
     <TextView
         android:id="@+id/textView8"
+        style="@style/margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/PasswordRequirments"
+        android:textColor="@color/formText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
         android:id="@+id/errorEmail"
-        android:layout_width="0dp"
+        style="@style/margin"
+        android:layout_width="371dp"
         android:layout_height="wrap_content"
         android:text="@string/errorMessage"
+        android:textColor="@color/formText"
+        android:visibility="invisible"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277" />
 
     <TextView
         android:id="@+id/tvLength"
+        style="@style/margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/PasswordRequirmentsLength"
+        android:textColor="@color/formText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvNumbers"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.002" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvNumbers"
+        style="@style/margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/PasswordREquirmentsNumber"
+        android:textColor="@color/formText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.472" />
+
+    <TextView
+        android:id="@+id/tvSpecialSign"
+        style="@style/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PasswordRequirmentsSpecialSign"
+        android:textColor="@color/formText"
+        app:layout_constraintBottom_toTopOf="@+id/editTextRepeatPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toEndOf="@+id/tvLetters"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumbers"
+        app:layout_constraintVertical_bias="0.485" />
 
     <TextView
         android:id="@+id/tvLetters"
+        style="@style/margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/PasswordRequirmentsLetter"
+        android:textColor="@color/formText"
         app:layout_constraintBottom_toTopOf="@+id/editTextRepeatPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLength"
-        app:layout_constraintVertical_bias="0.324" />
-
-    <TextView
-        android:id="@+id/tvSpecialSign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/PasswordRequirmentsSpecialSign"
-        app:layout_constraintBottom_toTopOf="@+id/editTextRepeatPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
-        app:layout_constraintStart_toEndOf="@+id/tvLetters"
-        app:layout_constraintTop_toBottomOf="@+id/tvNumbers"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/errorPrivacyPolicy"
+        style="@style/margin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/errorPrivacyPolicyAgreement"
+        android:textColor="@color/formText"
+        android:visibility="invisible"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRepeatPassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.016" />
 
     <ImageButton
         android:id="@+id/imageButton2"
+        style="@style/margin"
         android:layout_width="52dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
+
+        android:layout_marginTop="58dp"
+        android:background="@drawable/transparent_background"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
         app:layout_constraintEnd_toStartOf="@+id/txtxVRegistrion"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:tint="@color/arrowNavigation"
+        tools:srcCompat="@drawable/left_arror_nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

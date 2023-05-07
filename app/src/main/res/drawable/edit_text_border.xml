@@ -1,0 +1,23 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Stan podświetlony (w trakcie wpisywania) -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+
+            <stroke
+                android:width="2dp"
+                android:color="@color/focus_border_color" /> <!-- Twój wybrany kolor podświetlenia -->
+        </shape>
+    </item>
+
+    <!-- Stan niepodświetlony (po zakończeniu wpisywania) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp" />
+
+            <stroke
+                android:width="2dp"
+                android:color="#515151" /> <!-- Twój oryginalny kolor obramowania -->
+        </shape>
+    </item>
+</selector>

@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        style="@style/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,31 +26,40 @@
             android:layout_height="wrap_content"
             android:textSize="32dp"
             android:textFontWeight="@integer/material_motion_duration_long_2"
-            android:text="@string/AppLogoHeadline" />
+            android:text="@string/AppLogoHeadline"
+            android:paddingTop="96dp"
+            android:gravity="center"
+            style="@style/margin"/>
 
         <TextView
             android:id="@+id/textViewSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/subtitleApp" />
+            android:text="@string/subtitleApp"
+            style="@style/margin"
+            android:layout_marginBottom="126dp"
+            android:gravity="center"/>
 
         <EditText
             android:id="@+id/editEmail"
-            android:layout_width="wrap_content"
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#B5B5B5"
+            android:backgroundTint="#CBCBCB"
             android:ems="10"
+            android:textSize="13dp"
             android:hint="@string/HintEmail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textColor="#B5B5B5"
+            android:textColorHint="@color/formText"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/messageisEmailExists"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/SingInEmailisExists" />
+            android:text="@string/SingInEmailisExists"
+            />
 
         <EditText
             android:id="@+id/password"
@@ -57,14 +67,35 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/HintPassword"
+            android:textSize="13dp"
+            android:textColorHint="@color/formText"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingTop="28dp"
+            android:backgroundTint="#CBCBCB"
+
+            android:drawableRight="@drawable/eye_icon_selector"
+
+            />
 
         <TextView
             android:id="@+id/messageisPasswordRight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/messageValidationPassword" />
+            android:text="@string/messageValidationPassword"
+            />
+
+        <TextView
+            android:id="@+id/forgottenPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:minHeight="48dp"
+            android:onClick="resetPassword"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/ForgottenPasswordReset"
+            android:textColor="#B5B5B5" />
 
         <Button
             android:id="@+id/btnSignIn"
@@ -72,31 +103,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="signIn"
-
-            android:text="Button"
+            android:layout_marginBottom="18dp"
+            android:text="@string/btnNavigationSinin"
+            android:textColor="@color/text_common"
 
             />
 
         <TextView
-            android:id="@+id/forgottenPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:onClick="resetPassword"
-            android:text="@string/ForgottenPasswordReset"
-            android:textColor="#B5B5B5" />
-
-        <TextView
             android:id="@+id/continueGoogle"
+            style="@style/margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ContinuewithGoogle" />
+            android:gravity="center"
+            android:paddingBottom="38dp"
+            android:text="@string/ContinuewithGoogle"
+            android:textColor="@color/text_common" />
 
         <TextView
             android:id="@+id/continueFb"
+            style="@style/margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:gravity="center"
+            android:text="@string/continueFb"
+            android:textColor="@color/text_common" />
 
     </LinearLayout>
 

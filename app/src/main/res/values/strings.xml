@@ -31,6 +31,38 @@
     <string name="ContinuewithGoogle">Kontynuuj z Google</string>
     <string name="ContinuewithFacebook">Kontynuuj z Facebook</string>
     <string name="SingInEmailisExists">Nie ma takiego konta</string>
-    <string name="messageValidationPassword">Hasło jest nie poprawne.</string>>
+    <string name="messageValidationPassword">Hasło jest nie poprawne.</string>
+    <string name="textViewHeadlinePageSettings">Ustawienia</string>
+    <string name="settingsEditPassowrd">Zmień hasło</string>
+    <string name="settingsEditEmail">settingsEditEmail</string>
+    <string name="settingsEmail">Zmień email</string>
+    <string name="settingsConnectedAcc">Połączone konta</string>
+    <string name="settingsAgreemenetManagment">Zarządzaj zgodami</string>
+    <string name="settingsCustom">DOSTOSUJ</string>
+    <string name="settingsLanguage">"Język: "</string>
+    <string name="settingsTheme">Wygląd</string>
+    <string name="settingModeNight">Noc</string>
+    <string name="settingModeDay">Dzień</string>
+    <string name="settingNotification">POWIADOMIENIA</string>
+    <string name="settingsNotificationReminder">Przypomnienie o nauce</string>
+    <string name="settingsNotificationCommentsReply">Odpowiedzi na komentarze</string>
+    <string name="settingsNotificationNewMessages">Nowe wiadomości</string>
+    <string name="settingsEditAccount">EDYTUJ DANE</string>
+    <string name="settingLanguage">Polski</string>
+    <string name="settingsResetProgress">Zresetuj mój progres</string>
+    <string name="settingsDeleteAcc">Usuń konto</string>
+    <string name="settingsSinngOut">Wyloguj</string>
+    <string name="hintCurrentPassword">Obecne hasło</string>
+    <string name="errorMessageIncorrectPassword">Nie prawidłowe hasło !</string>
+    <string name="resetPassowrd">Zresetuj hasło</string>
+    <string name="headlineChangePassword">Zmień hasło</string>
+    <string name="navigationConfirm">Potwierdz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="errorMessagePickOtherEmail">Istnieje konto powiązane z danych adresem email. Wybierz inny</string>
+    <string name="registrationForm">Rejestracja</string>
+    <string name="btnNavigationSinin">Zaloguj</string>
+    <string name="continueFb">Kontynuuj przez Facebook</string>
+    >
 
 </resources>

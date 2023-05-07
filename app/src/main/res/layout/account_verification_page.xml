@@ -59,7 +59,8 @@
         android:id="@+id/btnNextConfirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/primary_button_background"
+
+        style="@style/PrimaryButtonStyle"
         android:textColor="@color/primary_button_text_color"
         android:text="@string/btnNextVerify"
 
@@ -74,7 +75,7 @@
         android:id="@+id/btnSendAgainCode"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/secondary_button_background"
+        style="@style/SecondaryButtonStyle"
         android:text="@string/btnSendCodeAgain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

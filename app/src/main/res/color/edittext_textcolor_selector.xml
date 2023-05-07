@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Stan podświetlony (w trakcie wpisywania) -->
+    <item android:state_focused="true" android:color="#FF0000" /> <!-- Twój wybrany kolor podświetlenia -->
+
+    <!-- Stan niepodświetlony (po zakończeniu wpisywania) -->
+    <item android:color="#515151" /> <!-- Twój oryginalny kolor tekstu -->
+</selector>

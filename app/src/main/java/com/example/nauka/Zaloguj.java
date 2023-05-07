@@ -1,7 +1,9 @@
 package com.example.nauka;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nauka.bottomnavigation.MainActivityTransition;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.w3c.dom.Text;
@@ -75,8 +78,32 @@ public class Zaloguj extends AppCompatActivity {
 
                         System.out.println(editEmail.getText().toString() +""+editPassword.getText().toString());
                         try{
-                            Intent intent = new Intent(Zaloguj.this,HomePage.class);
+                            Intent intent = new Intent(Zaloguj.this, MainActivityTransition.class);
                             startActivity(intent);
+
+
+                            /*
+                                 MECHANIZM SESJI
+                                 Sesja to czas, w którym użytkownik jest aktywny w Twojej aplikacji, a
+                                 aplikacja może przechowywać informacje o tym użytkowniku, takie jak ID,
+                                 nazwa użytkownika, adres e-mail itp.
+                             */
+
+                            // Uzyskaj obiekt SharedPreferences dla nazwy "myPrefs"
+                            SharedPreferences prefs = getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
+
+                            // Edytuj SharedPreferences
+                            SharedPreferences.Editor editor = prefs.edit();
+
+                            // Dodaj wartość
+
+                            editor.putString("email", email);
+                            editor.putString("id", String.valueOf(db.getIdByEmail(email)));
+
+                            // Zapisz zmiany
+                            editor.apply();
+
+
                         }catch (Exception e)
                         {
                             System.out.println("ups");

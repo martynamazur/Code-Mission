@@ -14,4 +14,25 @@
     <color name="primary_button_text_color">#FFFFFF</color>
     <color name="primary_button_color">#F25100</color>
     <color name="secondary_button_text_color">#787878</color>
+    <color name="formText">#555555</color>
+
+    <color name="checkedbox">#F25100</color>
+    <color name="unchecked_color">#FFFFFF</color>
+    <color name="checkbox_background_color">#FFFFFF</color>
+
+    <color name="headline">#EEEEEE</color>
+    <color name="text_common">#EEEEEE</color>
+    <color name="warning_message">#FF6D2E</color>
+    <color name="warning_message_good">#299333</color>
+    <color name="icon_tint">#FF6D2E</color>
+    <color name="arrowNavigation">#D9D9D9</color>
+    <color name="focus_border_color">#C3C3C3</color>
+    <color name="default_border_color">#555555</color>
+
+    <color name="switch_color_true">#F25100</color>
+    <color name="switch_color_false">#474747</color>
+    <color name="underline">#3D3D3D</color>
+
+    <color name="orange_app_theme">#FF6D2E</color>
+    <color name="navigation_bottom_background">#272727</color>
 </resources>

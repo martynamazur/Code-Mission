@@ -1,4 +1,4 @@
-package com.example.nauka;
+package com.example.nauka.passwordEncryption;
 import org.mindrot.jbcrypt.BCrypt;
 public class HashPassword {
 

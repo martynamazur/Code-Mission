@@ -1,17 +1,27 @@
 package com.example.nauka;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
+
+
     private RecyclerView recyclerView;
+
 
 
     @SuppressLint("SetTextI18n")
@@ -19,7 +29,20 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
 
-        System.out.println("hejka 1");
+
+
+        //BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+
+
+
+
+        // Tworzenie fragmentu i dodawanie go do layoutu
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        MessageListFragment fragment = new MessageListFragment();
+        fragmentTransaction.add(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
+
         recyclerView = findViewById(R.id.message_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -32,8 +55,11 @@ public class HomePage extends AppCompatActivity {
         MessageAdapter adapter = new MessageAdapter(listaWiadomosci);
         System.out.println("hejka 4");
         recyclerView.setAdapter(adapter);
-        System.out.println("hejka 5");
+
+
+
 
     }
+
 
 }

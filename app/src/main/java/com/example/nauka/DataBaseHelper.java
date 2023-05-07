@@ -1,13 +1,19 @@
 package com.example.nauka;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+
+import org.mindrot.jbcrypt.BCrypt;
+
+import java.util.Objects;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
@@ -60,15 +66,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public boolean isEmailExists(String email){
         SQLiteDatabase db = this.getReadableDatabase();
 
-                        // nie musze robic łancucha bo tutaj mam odrazu
-        Cursor cursor = db.query(USER_TABLE, null,
-                COLUMN_USER_EMAIL + "=?", new String[]{email},
-                null, null, null);
-
-        boolean exists = (cursor.getCount() > 0);
-        cursor.close();
+        /*
+            Metoda zwraca liczbę wierszy spełniających warunki zapytania w tabeli bazy danych.
+         */
+        long count = DatabaseUtils.queryNumEntries(db, USER_TABLE, COLUMN_USER_EMAIL + "=?", new String[]{email});
         db.close();
-        return exists;
+        System.out.println("CO w isemailExists" + (count > 0));
+        return count > 0;
 
     }
 
@@ -89,5 +93,52 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return  exists;
 
     }
+
+    @SuppressLint("Range")
+    public int getIdByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COLUMN_ID};
+        String selection = COLUMN_USER_EMAIL + "=?";
+        String[] selectionArgs = {email};
+
+        Cursor cursor = db.query(USER_TABLE, columns, selection, selectionArgs, null, null, null);
+        int id = -1;
+        if (cursor.moveToFirst()) {
+            id = cursor.getInt(cursor.getColumnIndex(COLUMN_ID));
+        }
+        cursor.close();
+        db.close();
+        return id;
+    }
+
+    public boolean comparePasswordsById(String password, String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        boolean isSame = false;
+        String[] columns = {USER_PASSWORD};
+        String selection = COLUMN_ID + "=?";
+        String[] selectionArgs = {id};
+        Cursor cursor = db.query(USER_TABLE, columns, selection, selectionArgs, null, null, null);
+        if (cursor.moveToFirst()) {
+            @SuppressLint("Range") String passwordTest = cursor.getString(cursor.getColumnIndex(USER_PASSWORD));
+            if (Objects.equals(passwordTest, password)) {
+                isSame = true;
+            }
+        }
+        cursor.close();
+        db.close();
+        return isSame;
+    }
+
+    public boolean changeEmail(String id, String newEmail){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USER_EMAIL, newEmail);
+        int numRowsUpdated = db.update(USER_TABLE, values, COLUMN_ID + "=?", new String[]{id});
+        db.close();
+        return numRowsUpdated > 0;
+    }
+
+
+
 
 }

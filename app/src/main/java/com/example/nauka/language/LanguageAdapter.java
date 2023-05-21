@@ -50,12 +50,9 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langua
         holder.flag_icon.setImageResource(resourceId);
 
         // nasluchuje ktory element checkboxa zostal klikniety
-        holder.picked_language.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (onLanguageClickListener != null) {
-                    onLanguageClickListener.onLanguageClick(position);
-                }
+        holder.picked_language.setOnClickListener(v -> {
+            if (onLanguageClickListener != null) {
+                onLanguageClickListener.onLanguageClick(position);
             }
         });
 

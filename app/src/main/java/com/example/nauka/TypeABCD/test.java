@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.nauka.R;
+import com.example.nauka.hint_quiz.HintAdapter;
 import com.example.nauka.hint_quiz.HintModel;
 
 import java.util.ArrayList;
@@ -42,6 +43,9 @@ public class test extends AppCompatActivity {
         array2.add(hintModel2);
         array2.add(hintModel3);
         RecyclerView recyclerViewHints = findViewById(R.id.hintsRV);
+        HintAdapter hintAdapter = new HintAdapter(test.this,array2);
+        recyclerViewHints.setAdapter(hintAdapter);
+        recyclerViewHints.setLayoutManager(new LinearLayoutManager(this));
 
 
 

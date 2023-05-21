@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.nauka.singup.SignUp;
+
+public class MainScreenChoice extends AppCompatActivity {
 
     private Button btnZaloguj;
     Button btnZarejestruj;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(MainActivity.this,SignUp.class);
+                    Intent intent = new Intent(MainScreenChoice.this, SignUp.class);
                     startActivity(intent);
                 } catch (Exception e) {
                     System.out.println("blad");

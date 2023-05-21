@@ -1,12 +1,14 @@
-package com.example.nauka;
+package com.example.nauka.accountVerification;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.nauka.R;
+import com.example.nauka.Zaloguj;
 
 public class VerificationComplited extends AppCompatActivity {
 

@@ -1,9 +1,7 @@
-package com.example.nauka;
+package com.example.nauka.singup;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,13 +11,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.ViewCompat;
+
+import com.example.nauka.AccountVerification;
+import com.example.nauka.DataBaseHelper;
+import com.example.nauka.R;
 
 public class SignUp extends AppCompatActivity {
 
@@ -148,6 +147,7 @@ public class SignUp extends AppCompatActivity {
 
 
                  boolean b = dataBaseHelper.addOne(sinUp_userModel);
+
                  Toast.makeText(SignUp.this, "Success=" + b, Toast.LENGTH_SHORT).show();
 
 

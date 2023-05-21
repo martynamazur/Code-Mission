@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nauka.accountVerification.VerificationComplited;
+
 public class AccountVerification extends AppCompatActivity {
 
     @Override
@@ -75,8 +77,7 @@ public class AccountVerification extends AppCompatActivity {
         btnNextConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // returns to sing in screen if the code is correct
-                // method which check if the code is correct//
+
 
                 Intent intent = new Intent(AccountVerification.this, VerificationComplited.class);
                 startActivity(intent);

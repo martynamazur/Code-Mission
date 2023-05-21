@@ -1,4 +1,4 @@
-package com.example.nauka;
+package com.example.nauka.homefeed;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nauka.R;
 
 import java.util.ArrayList;
 

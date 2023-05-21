@@ -1,19 +1,17 @@
 package com.example.nauka;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.nauka.homefeed.Message;
+import com.example.nauka.homefeed.MessageAdapter;
+import com.example.nauka.homefeed.MessageListFragment;
 
 import java.util.ArrayList;
 

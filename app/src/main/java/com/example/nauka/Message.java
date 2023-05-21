@@ -3,24 +3,27 @@ package com.example.nauka;
 import java.util.Date;
 
 public class Message {
-    private String author;
+    private String header;
     private String content;
-    private String title;
     private Date date;
+    private int messageId;
 
-    public Message(String author, String content) {
-        this.author = author;
+    public Message(String header, String content, Date date) {
+        this.header = header;
         this.content = content;
         this.date = date;
-        this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public Message() {
+
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public String getHeader() {
+        return header;
+    }
+
+    public void setHeader(String header) {
+        this.header = header;
     }
 
     public String getContent() {
@@ -39,7 +42,7 @@ public class Message {
         this.date = date;
     }
 
-    public String getTitle() {
-        return title;
+    public void setMessageId(int messageId) {
+        this.messageId = messageId;
     }
 }

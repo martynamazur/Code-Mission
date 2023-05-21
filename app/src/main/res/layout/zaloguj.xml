@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/singinpage"
+
     android:scaleType="centerCrop">
 
     <LinearLayout
+        android:gravity="center"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -114,19 +116,23 @@
             style="@style/margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:paddingBottom="38dp"
             android:text="@string/ContinuewithGoogle"
-            android:textColor="@color/text_common" />
+            android:textColor="@color/text_common"
+            android:drawablePadding="8dp"
+
+            app:drawableLeftCompat="@drawable/google" />
 
         <TextView
             android:id="@+id/continueFb"
             style="@style/margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="@string/continueFb"
-            android:textColor="@color/text_common" />
+            android:textColor="@color/text_common"
+            android:drawablePadding="8dp"
+            app:drawableLeftCompat="@drawable/facebook" />
+
 
     </LinearLayout>
 

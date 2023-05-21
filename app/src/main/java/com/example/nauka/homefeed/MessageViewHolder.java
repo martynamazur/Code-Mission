@@ -1,9 +1,11 @@
-package com.example.nauka;
+package com.example.nauka.homefeed;
 
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nauka.R;
 
 public class MessageViewHolder extends RecyclerView.ViewHolder {
 

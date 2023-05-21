@@ -1,4 +1,4 @@
-package com.example.nauka;
+package com.example.nauka.singup;
 
 import android.widget.CheckBox;
 

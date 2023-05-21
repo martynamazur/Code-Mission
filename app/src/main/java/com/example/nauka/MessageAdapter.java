@@ -1,5 +1,6 @@
 package com.example.nauka;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,61 +10,59 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
-    private ArrayList<Message> listaWiadomosci;
 
-    public MessageAdapter(ArrayList<Message> messages) {
-        this.listaWiadomosci = messages;
+    private List<Message> messages; // Lista wiadomości
+
+    public MessageAdapter(List<Message> messages) {
+        this.messages = messages;
     }
 
     @NonNull
     @Override
     public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.message_item, parent, false);
-        return new MessageViewHolder(itemView);
+        Context context = parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
+
+        // Inflate the custom layout
+        View messageView = inflater.inflate(R.layout.message_item, parent, false);
+
+        // Return a new holder instance
+        return new MessageViewHolder(messageView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
-        Message wiadomosc = listaWiadomosci.get(position);
-        holder.naglowek.setText(wiadomosc.getTitle());
-        holder.tresc.setText(wiadomosc.getContent());
-        //holder.tab.setText(wiadomosc.getTitle()); // set text on TabLayout.Tab object
+        // Get the data model based on position
+        Message message = messages.get(position);
 
+        // Set the text of the TextViews to the corresponding values from the message
+
+        holder.headerTextView.setText(message.getHeader());
+        holder.contentTextView.setText(message.getContent());
     }
-
 
     @Override
     public int getItemCount() {
-        return listaWiadomosci.size();
+        return messages.size();
     }
 
-    public static class WiadomosciViewHolder extends RecyclerView.ViewHolder {
-        TextView naglowek;
-        TextView tresc;
-
-        public WiadomosciViewHolder(View itemView) {
-            super(itemView);
-            naglowek = itemView.findViewById(R.id.naglowek);
-            tresc = itemView.findViewById(R.id.tresc);
-        }
-    }
-
+    /*
+    W skrócie, klasa MessageViewHolder reprezentuje
+    pojedynczy element listy w RecyclerView i przechowuje referencje
+    do poszczególnych widoków w tym elemencie, co umożliwia ich dostęp
+    i manipulację podczas wyświetlania danych.
+     */
     public class MessageViewHolder extends RecyclerView.ViewHolder {
-        public TextView naglowek;
-        public TextView tresc;
-        //public ActionBar.Tab naglowek;
-        //public ActionBar.Tab tresc;
+        TextView headerTextView;
+        TextView contentTextView;
 
         public MessageViewHolder(View itemView) {
             super(itemView);
-            naglowek = itemView.findViewById(R.id.naglowek);
-            tresc = itemView.findViewById(R.id.tresc);
-
+            headerTextView = itemView.findViewById(R.id.naglowek);
+            contentTextView = itemView.findViewById(R.id.tresc);
         }
     }
-
 }

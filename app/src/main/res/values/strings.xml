@@ -63,6 +63,35 @@
     <string name="registrationForm">Rejestracja</string>
     <string name="btnNavigationSinin">Zaloguj</string>
     <string name="continueFb">Kontynuuj przez Facebook</string>
-    >
+    <string name="followingTxt">Obserwujący</string>
+    <string name="followersTxt">Obserwowani</string>
+    <string name="headlineAchievements">Osiągnięcia</string>
+    <string name="headlineShowAll">Zobacz wszytskie</string>
+    <string name="defaultTxtUsername">\@Username</string>
+    <string name="lv">LV</string>
+    <string name="profileDateMyprofile">"Na misji od "</string>
+    <string name="team">Drużyna</string>
+    <string name="defaultEmpty">-</string>
+    <string name="defaultLv">0</string>
+    <string name="addFriends">Dodaj znajomych</string>
+    <string name="totalXp">Zdobyte XP</string>
+    <string name="defaultnumber">0</string>
+    <string name="followers">Obserwujący</string>
+    <string name="following">Obserwowani</string>
+    <string name="headlineProfile">Profile</string>
+    <string name="streak">Streak</string>
+    <string name="selectLanguage">Select language:</string>
+
+    <string name="welcome_title1">Witamy w  CODE  MISSION !</string>
+    <string name="welcome_message1"> Nauka programowania jeszcze nigdy nie była tak prosta i przyjemna. Zdobądź niezbędne umiejętności, krok po kroku! </string>
+    <string name="welcome_title2">Jak korzystać z aplikacji?</string>
+    <string name="welcome_message2"> Nauka programowania jeszcze nigdy nie była tak prosta i przyjemna. Zdobądź niezbędne umiejętności, krok po kroku! </string>
+    <string name="welcome_title3">Rankingi i osiągnięcia:</string>
+    <string name="welcome_message3"> Nauka programowania jeszcze nigdy nie była tak prosta i przyjemna. Zdobądź niezbędne umiejętności, krok po kroku! </string>
+    <string name="welcome_title4">Rankingi i osiągnięcia:</string>
+    <string name="welcome_message4"> Nauka programowania jeszcze nigdy nie była tak prosta i przyjemna. Zdobądź niezbędne umiejętności, krok po kroku! </string>
+    <string name="next">Dalej</string>
+    <string name="finish">Koniec</string>
+
 
 </resources>

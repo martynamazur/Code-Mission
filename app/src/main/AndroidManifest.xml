@@ -24,7 +24,7 @@
 
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".TypeABCD.test"
 
             android:exported="true">
             <intent-filter>
@@ -39,19 +39,15 @@
         <activity android:name=".ChangePasswordAuthentication"/>
         <activity android:name=".ChangePasswordNewPass"/>
         <activity android:name=".HomePage"/>
-
-        <activity android:name=".SignUp"/>
+        <activity android:name=".MainScreenChoice"/>
+        <activity android:name=".singup.SignUp"/>
         <activity android:name=".AccountVerification"/>
-        <activity android:name=".VerificationComplited"/>
+        <activity android:name=".accountVerification.VerificationComplited"/>
         <activity android:name=".profilesettings.ChangePassword"/>
         <activity android:name=".profilesettings.Settings"/>
         <activity android:name=".bottomnavigation.MainActivityTransition"/>
         <activity android:name=".profilesettings.ConfirmPassword"/>
         <activity android:name=".profilesettings.ChangeEmail"/>
-
-
-
-
 
 
     </application>

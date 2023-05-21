@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background_color">#232323</color>
+    <color name="background_color">#15131E</color>
 
     <color name="background">#AC1212</color>
     <color name="text_color_basic">#494949</color>
@@ -35,4 +35,9 @@
 
     <color name="orange_app_theme">#FF6D2E</color>
     <color name="navigation_bottom_background">#272727</color>
+    <color name="dotInactive">#808080</color>
+    <color name="dotActive">#673AB7</color>
+
+    <color name="light_violet">#22202E</color>
+
 </resources>

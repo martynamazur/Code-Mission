@@ -11,7 +11,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nauka.accountVerification.VerificationComplited;
-
+//do usuniecia
 public class AccountVerification extends AppCompatActivity {
 
     @Override
@@ -74,24 +74,18 @@ public class AccountVerification extends AppCompatActivity {
             public void afterTextChanged(Editable s) {}
         });
 
-        btnNextConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnNextConfirm.setOnClickListener(v -> {
 
 
-                Intent intent = new Intent(AccountVerification.this, VerificationComplited.class);
-                startActivity(intent);
+            Intent intent = new Intent(AccountVerification.this, VerificationComplited.class);
+            startActivity(intent);
 
-            }
         });
 
-        btnSendAgainCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //send code again
-                System.out.println("Wyslano kod");
+        btnSendAgainCode.setOnClickListener(v -> {
+            //send code again
+            System.out.println("Wyslano kod");
 
-            }
         });
 
 

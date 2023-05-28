@@ -24,27 +24,25 @@
 
         <TextView
             android:id="@+id/textViewLogo"
+            style="@style/margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="32dp"
-            android:textFontWeight="@integer/material_motion_duration_long_2"
-            android:text="@string/AppLogoHeadline"
-            android:paddingTop="96dp"
             android:gravity="center"
-            style="@style/margin"/>
+            android:paddingTop="64dp"
+            android:text="@string/AppLogoHeadline"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textSize="32dp" />
 
         <TextView
             android:id="@+id/textViewSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/subtitleApp"
-            style="@style/margin"
-            android:layout_marginBottom="126dp"
+            android:layout_marginBottom="32dp"
             android:gravity="center"/>
 
         <EditText
             android:id="@+id/editEmail"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#CBCBCB"
@@ -60,7 +58,9 @@
             android:id="@+id/messageisEmailExists"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/orange_app_theme"
             android:text="@string/SingInEmailisExists"
+            android:textSize="12dp"
             />
 
         <EditText
@@ -84,8 +84,9 @@
             android:id="@+id/messageisPasswordRight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/messageValidationPassword"
-            />
+            android:textColor="@color/orange_app_theme"
+            android:textSize="12dp"
+            android:text="@string/messageValidationPassword" />
 
         <TextView
             android:id="@+id/forgottenPassword"
@@ -116,7 +117,7 @@
             style="@style/margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="38dp"
+            android:paddingBottom="12dp"
             android:text="@string/ContinuewithGoogle"
             android:textColor="@color/text_common"
             android:drawablePadding="8dp"

@@ -4,19 +4,20 @@ import javax.xml.transform.sax.SAXResult;
 
 public class HintModel {
 
-    private int count;
+    private String count;
     private String iconPath;
-    public HintModel(int count, String iconPath) {
+    public HintModel(String count, String iconPath) {
         this.count = count;
         this.iconPath = iconPath;
     }
 
-    public int getCount() {
+    public String getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(String  count) {
         this.count = count;
+
     }
 
     public String getIconPath() {

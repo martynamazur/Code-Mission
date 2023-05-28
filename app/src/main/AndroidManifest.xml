@@ -18,13 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
 
-        android:icon="@drawable/iconapp"
+        android:icon="@drawable/apps_icon"
 
         android:theme="@style/AppTheme"
 
         tools:targetApi="31">
         <activity
-            android:name=".TypeABCD.test"
+            android:name=".Zaloguj"
 
             android:exported="true">
             <intent-filter>
@@ -34,10 +34,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Zaloguj"/>
-        <activity android:name=".ResetPassword"/>
-        <activity android:name=".ChangePasswordAuthentication"/>
-        <activity android:name=".ChangePasswordNewPass"/>
+       <activity android:name=".TypeABCD.test"/>
+        <activity android:name=".resetPassword.ResetPassword"/>
+        <activity android:name=".changePassword.ChangePasswordAuthentication"/>
+        <activity android:name=".changePassword.ChangePasswordNewPass"/>
         <activity android:name=".HomePage"/>
         <activity android:name=".MainScreenChoice"/>
         <activity android:name=".singup.SignUp"/>

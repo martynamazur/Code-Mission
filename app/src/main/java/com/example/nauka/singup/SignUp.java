@@ -86,6 +86,7 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+
                 singUp_dataValidation = new SingUp_DataValidation(
                         editTextEmail.getText().toString(),
                         editTextPassword.getText().toString(),

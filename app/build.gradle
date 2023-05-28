@@ -41,6 +41,8 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.32'
     implementation 'org.mindrot:jbcrypt:0.4'
     implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
 
 
 }

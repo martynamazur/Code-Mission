@@ -14,6 +14,7 @@
     <style name="margin" >
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
+        <item name="android:paddingTop">64dp</item>
     </style>
 
     <style name="marginTop">

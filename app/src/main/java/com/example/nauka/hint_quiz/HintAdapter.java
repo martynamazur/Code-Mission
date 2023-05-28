@@ -34,7 +34,7 @@ public class HintAdapter extends RecyclerView.Adapter<HintAdapter.HintViewHolder
     @NonNull
     @Override
     public HintAdapter.HintViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.question_abcd_template, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.special_hints_item, parent, false);
         return new HintAdapter.HintViewHolder(view);
     }
 

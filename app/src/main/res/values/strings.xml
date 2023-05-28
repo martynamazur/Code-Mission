@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">nauka</string>
+    <string name="app_name">CodeMission</string>
     <string name="user">Użytkownik</string>
     <string name="play">Graj</string>
     <string name="leaderboard">Tablica WYnikow</string>
@@ -92,6 +92,15 @@
     <string name="welcome_message4"> Nauka programowania jeszcze nigdy nie była tak prosta i przyjemna. Zdobądź niezbędne umiejętności, krok po kroku! </string>
     <string name="next">Dalej</string>
     <string name="finish">Koniec</string>
+    <string name="resetPasswordDescription">Proszę wpisz swój email lub username</string>
+    <string name="ResetPasswordAccountDoesntExist">Konto nie istnieje !</string>
+    <string name="ResetPasswordNavigation">Potwierdz</string>
+    <string name="ResetPasswordSendCodeAgain">Wyślij kod ponownie</string>
+    <string name="verifyCodeError">Kod weryfikacyjny jest nie poprawny</string>
+    <string name="resetPasswordheadline">Zresetuj Hasło</string>
+    <string name="verificationDescription">Proszę wpisz kod weryfikacyjny, który otrzymałeś na swojego emaila</string>
+    <string name="errorMessageCodeValidation">Nie poprawny kod !</string>
+    <string name="haslo">Hasło</string>
 
 
 </resources>

@@ -1,21 +1,29 @@
 package com.example.nauka.TypeABCD;
 
 import java.util.ArrayList;
+import java.util.List;
 
 //ABCD
-public class QuestionModel {
+public class QuestionModelAbcd {
 
     private String title;
     private String questionDescription;
     private String correctAnwser;
-    private ArrayList<String> anwsers;
+    private List<String> anwsers;
+    private String category;
+    private int correctAnwserId;
 
-    public QuestionModel(String title, String questionDescription, String correctAnwser, ArrayList<String> anwsers) {
+
+
+    public QuestionModelAbcd(String title, String questionDescription, String correctAnwser, List<String> anwsers, int correctAnswerIndex) {
         this.title = title;
         this.questionDescription = questionDescription;
         this.correctAnwser = correctAnwser;
         this.anwsers = anwsers;
+        this.correctAnwserId = correctAnswerIndex;
     }
+
+
 
     public String getTitle() {
         return title;
@@ -41,7 +49,7 @@ public class QuestionModel {
         this.correctAnwser = correctAnwser;
     }
 
-    public ArrayList<String> getAnwsers() {
+    public List<String> getAnwsers() {
         return anwsers;
     }
 
@@ -49,6 +57,14 @@ public class QuestionModel {
         this.anwsers = anwsers;
     }
 
+    public String getCategory() {
+        return category;
+    }
 
-
+    public void setCategory(String category) {
+        this.category = category;
+    }
+    public int getCorrectAnwserId() {
+        return correctAnwserId;
+    }
 }

@@ -25,6 +25,10 @@ public class SingUp_DataValidation {
         this.password = password;
     }
 
+    public SingUp_DataValidation(String newPassword) {
+        this.password = newPassword;
+    }
+
     public boolean isPrivacyPolicyChecked(){
         return privacyPolicy;
     }

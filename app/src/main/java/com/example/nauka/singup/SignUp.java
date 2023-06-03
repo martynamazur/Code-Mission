@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.nauka.AccountVerification;
 import com.example.nauka.DataBaseHelper;
 import com.example.nauka.R;
+import com.example.nauka.button.ButtonClickSound;
 
 public class SignUp extends AppCompatActivity {
 
@@ -45,6 +46,7 @@ public class SignUp extends AppCompatActivity {
     int validationPass;
     DataBaseHelper dataBaseHelper;
     SingUp_DataValidation singUp_dataValidation;
+    private ButtonClickSound buttonClickSound;
 
 
 
@@ -69,6 +71,7 @@ public class SignUp extends AppCompatActivity {
         errorEmail = findViewById(R.id.errorEmail);
         errorPrivacyPolicy = findViewById(R.id.errorPrivacyPolicy);
 
+        buttonClickSound = new ButtonClickSound(this);
 
 
         //zaimplementowac metode ktora czy validacji danych zmieni widocznosc
@@ -130,8 +133,11 @@ public class SignUp extends AppCompatActivity {
          @Override
          public void onClick(View v) {
 
+             buttonClickSound.playButtonClickSound();
+
              // przed tym musi mi funckja zwrocic czy wszystko co chcialam jest zaznaczone
              //do implementacji
+
 
              SingUp_DataValidation singUp_dataValidation = new SingUp_DataValidation(
                      editTextEmail.getText().toString(),

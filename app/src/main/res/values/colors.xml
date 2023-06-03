@@ -39,5 +39,7 @@
     <color name="dotActive">#673AB7</color>
 
     <color name="light_violet">#22202E</color>
+    <color name="checkboxBorder">#CCCCCC</color>
 
+    <color name="linked_account_item_border">#3D3D3D</color>
 </resources>

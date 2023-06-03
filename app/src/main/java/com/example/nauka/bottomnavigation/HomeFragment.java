@@ -24,6 +24,7 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        /*
         DataBaseHelper db = new DataBaseHelper(getActivity()); // Użyj getActivity() zamiast HomeFragment.this
         List<Message> m = db.loadMessagesFromDatabase();
 
@@ -32,7 +33,7 @@ public class HomeFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+         */
 
 
         // Pozostała część kodu, jeśli istnieje

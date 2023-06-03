@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:id="@+id/card_view_abcd"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+
+    android:layout_marginStart="23dp"
+    android:layout_marginTop="23dp">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/unlinkedAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/UnlinkedAccount" />
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+

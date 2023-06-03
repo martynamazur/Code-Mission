@@ -101,6 +101,14 @@
     <string name="verificationDescription">Proszę wpisz kod weryfikacyjny, który otrzymałeś na swojego emaila</string>
     <string name="errorMessageCodeValidation">Nie poprawny kod !</string>
     <string name="haslo">Hasło</string>
+    <string name="SingInNavigation">Zaloguj</string>
+    <string name="Zarejestruj">Zarejestruj</string>
+    <string name="default_notification_channel_id">testowa wiadomosc hello ziemia</string>
+    <string name="errorMessagePickLanguage">Nie wybrano języka</string>
+    <string name="UnlinkedAccount">Wyłącz</string>
+    <string name="SettingsHeadlineGoogleAcc">Konto Google</string>
+    <string name="SettingsfacebookAcc">Konto Facebook</string>
+    <string name="SettingLinkedAccDescription">To są konta społecznościowe, które połączyłeś z kontem CodeMission w celu logowania. Masz możliwość wyłączenia dostępu do tych kont tutaj.</string>
 
 
 </resources>

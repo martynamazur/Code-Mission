@@ -1,4 +1,4 @@
-package com.example.nauka;
+package com.example.nauka.bottomnavigation;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nauka.R;
 import com.example.nauka.homefeed.Message;
 import com.example.nauka.homefeed.MessageAdapter;
 import com.example.nauka.homefeed.MessageListFragment;

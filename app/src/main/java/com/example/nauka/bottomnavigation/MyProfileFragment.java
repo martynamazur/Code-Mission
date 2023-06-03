@@ -24,12 +24,9 @@ public class MyProfileFragment extends Fragment {
 
         btnSettings = view.findViewById(R.id.btnSettings);
 
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Settings.class);
-                startActivity(intent);
-            }
+        btnSettings.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), Settings.class);
+            startActivity(intent);
         });
 
         return view;

@@ -9,12 +9,13 @@
     android:layout_marginTop="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="16dp"
-    tools:context=".HomeFragment">
+    tools:context=".bottomnavigation.HomePage">
     >
 
 
     <TextView
         android:id="@+id/titlePage"
+        android:textColor="@color/text_common"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Leaderboard"
@@ -30,6 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/text_common"
             android:text="SOLO"/>
 
         <TextView
@@ -37,6 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/text_common"
             android:text="TEAM"/>
     </LinearLayout>
 

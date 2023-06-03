@@ -105,7 +105,7 @@
             style="@style/TableButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="signIn"
+
             android:layout_marginBottom="18dp"
             android:text="@string/btnNavigationSinin"
             android:textColor="@color/text_common"

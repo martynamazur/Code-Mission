@@ -12,7 +12,11 @@ import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.nauka.bottomnavigation.HomeFragment;
+import com.example.nauka.bottomnavigation.HomePage;
 import com.example.nauka.bottomnavigation.MainActivityTransition;
+import com.example.nauka.button.ButtonClickSound;
 import com.example.nauka.resetPassword.ResetPassword;
 
 
@@ -25,6 +29,7 @@ public class Zaloguj extends AppCompatActivity {
     private EditText editEmail;
     private TextView messageisEmailExists;
     private TextView messageisPasswordRight;
+    private ButtonClickSound buttonClickSound;
 
 
 
@@ -42,10 +47,15 @@ public class Zaloguj extends AppCompatActivity {
         messageisPasswordRight.setVisibility(View.INVISIBLE);
         messageisEmailExists.setVisibility(View.INVISIBLE);
         btnZaloguj = findViewById(R.id.btnSignIn);
-
+        buttonClickSound = new ButtonClickSound(this);
 
         TextView contiuneGoogle = findViewById(R.id.continueGoogle);
         TextView continueFb = findViewById(R.id.continueFb);
+
+        btnZaloguj.setOnClickListener(v->{
+            Intent intent = new Intent(Zaloguj.this, MainActivityTransition.class);
+            startActivity(intent);
+        });
 
 
     }
@@ -58,15 +68,16 @@ public class Zaloguj extends AppCompatActivity {
 
 
         btnZaloguj.setOnClickListener(v -> {
-
+            buttonClickSound.playButtonClickSound();
             DataBaseHelper db = new DataBaseHelper(Zaloguj.this);
+
             if(db.isEmailExists(editEmail.getText().toString())){
 
                 showMessageErrorPassword();
 
                 if (db.singInValidation(editPassword.getText().toString(),editEmail.getText().toString())){
 
-                    //System.out.println(editEmail.getText().toString() +""+editPassword.getText().toString());
+                    System.out.println(editEmail.getText().toString() +""+editPassword.getText().toString());
 
                     Intent intent = new Intent(Zaloguj.this, MainActivityTransition.class);
                     startActivity(intent);
@@ -83,6 +94,7 @@ public class Zaloguj extends AppCompatActivity {
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putString("email", email);
                     editor.putString("id", String.valueOf(db.getIdByEmail(email)));
+                    editor.putString("singIn","true");
                     editor.apply();
 
                 }else{

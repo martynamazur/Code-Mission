@@ -14,7 +14,8 @@
     <style name="margin" >
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
-        <item name="android:paddingTop">64dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="marginTop">
@@ -27,12 +28,11 @@
         <item name="android:background">@drawable/button_background</item>
     </style>
 
-    <style name="PrimaryButtonStyle">
+    <style name="PrimaryButtonStyle" >
         <item name="android:background">@drawable/primary_button_background</item>
         <item name="android:textColor">@color/primary_button_text_color</item>
         <item name="android:textSize">16sp</item>
         <item name="android:padding">16dp</item>
-
     </style>
 
     <style name="SecondaryButtonStyle">
@@ -61,6 +61,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:padding">16dp</item>
     </style>
+
 
 
 

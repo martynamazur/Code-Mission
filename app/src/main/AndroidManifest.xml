@@ -2,12 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.nauka">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
 
     <application
+
 
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
@@ -23,9 +29,10 @@
         android:theme="@style/AppTheme"
 
         tools:targetApi="31">
-        <activity
-            android:name=".Zaloguj"
 
+
+        <activity
+            android:name=".MainScreenChoice"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,8 +45,8 @@
         <activity android:name=".resetPassword.ResetPassword"/>
         <activity android:name=".changePassword.ChangePasswordAuthentication"/>
         <activity android:name=".changePassword.ChangePasswordNewPass"/>
-        <activity android:name=".HomePage"/>
-        <activity android:name=".MainScreenChoice"/>
+        <activity android:name=".bottomnavigation.HomePage"/>
+        <activity android:name=".Zaloguj"/>
         <activity android:name=".singup.SignUp"/>
         <activity android:name=".AccountVerification"/>
         <activity android:name=".accountVerification.VerificationComplited"/>
@@ -48,6 +55,20 @@
         <activity android:name=".bottomnavigation.MainActivityTransition"/>
         <activity android:name=".profilesettings.ConfirmPassword"/>
         <activity android:name=".profilesettings.ChangeEmail"/>
+        <receiver android:name=".notification.MyAlarmReceiver" />
+        <activity android:name=".language.ChangeLanguage"/>
+        <activity android:name=".walkrought.Walkrough"/>
+        <activity android:name=".profilesettings.ManageAgreements"/>
+        <activity android:name=".linkedAccounts.LinkedAccount"/>
+
+
+
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
 
 
     </application>

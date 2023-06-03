@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.nauka.DataBaseHelper;
 import com.example.nauka.R;
 import com.example.nauka.Zaloguj;
+import com.example.nauka.language.ChangeLanguage;
+import com.example.nauka.linkedAccounts.LinkedAccount;
 
 import org.w3c.dom.Text;
 
@@ -42,52 +44,77 @@ public class Settings extends AppCompatActivity  {
         TextView textViewSignOut = findViewById(R.id.textViewSignOut);
 
 
-        changePassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Settings.this, ConfirmPassword.class);
-                startActivity(intent);
-                }}
+        changePassword.setOnClickListener(v -> {
+            Intent intent = new Intent(Settings.this, ConfirmPassword.class);
+            startActivity(intent);
+            }
         );
 
 
-        changeEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Settings.this, ChangeEmail.class);
-                startActivity(intent);
-            }}
+        changeEmail.setOnClickListener(v -> {
+            Intent intent = new Intent(Settings.this, ChangeEmail.class);
+            startActivity(intent);
+        }
         );
 
-        manageConnectedAccounts.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Settings.this, ConnectedAccounts.class);
-                startActivity(intent);
-            }}
+        manageConnectedAccounts.setOnClickListener(v -> {
+            Intent intent = new Intent(Settings.this, ConnectedAccounts.class);
+            startActivity(intent);
+        }
         );
 
-        manageAgreements.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Settings.this, ManageAgreement.class);
-                startActivity(intent);
-            }}
+        manageAgreements.setOnClickListener(v -> {
+            Intent intent = new Intent(Settings.this, ManageAgreement.class);
+            startActivity(intent);
+        }
         );
 
 
 
-        textViewSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.clear();
-                editor.apply();
+        textViewSignOut.setOnClickListener(v -> {
+            SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear();
+            editor.apply();
 
-                Intent intent = new Intent(Settings.this, Zaloguj.class);
-                startActivity(intent);
-            }}
+            Intent intent = new Intent(Settings.this, Zaloguj.class);
+            startActivity(intent);
+        }
         );
+
+        // sharedpref problem
+        changeLanguage.setOnClickListener(v->{
+            try{
+                Intent intent = new Intent(Settings.this, ChangeLanguage.class);
+                startActivity(intent);
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("heheh debil");
+            }
+
+
+        });
+
+        manageConnectedAccounts.setOnClickListener(v->{
+            try{
+                Intent intent = new Intent(Settings.this, LinkedAccount.class);
+                startActivity(intent);
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("heheh debil jestes");
+            }
+
+        });
+
+
+        manageAgreements.setOnClickListener(v->{
+            try{
+                Intent intent = new Intent(Settings.this, ManageAgreements.class);
+                startActivity(intent);
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("kolejny debil");
+            }
+        });
     }
 }

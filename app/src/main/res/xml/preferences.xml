@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+
+        <CheckBoxPreference
+            android:key="firstRun"
+            android:title="First Run"
+            android:summary="Indicates whether the app is run for the first time"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

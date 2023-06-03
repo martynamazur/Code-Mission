@@ -7,26 +7,27 @@
     tools:context=".MainScreenChoice">
 
     <LinearLayout
+        style="@style/margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/margin"
-        >
+        app:layout_constraintVertical_bias="0.222">
 
 
         <TextView
             android:id="@+id/textViewLogo"
             style="@style/margin"
-            android:textColor="@color/text_common"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingTop="64dp"
             android:text="@string/AppLogoHeadline"
+            android:textColor="@color/text_common"
             android:textFontWeight="@integer/material_motion_duration_long_2"
             android:textSize="32dp" />
 
@@ -41,22 +42,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/astronaut_on_moon" />
-
-        <Button
-            android:id="@+id/btnZarejestruj"
-            style="@style/PrimaryButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            app:srcCompat="@drawable/astronaut_on_moon"
+            android:layout_marginBottom="64dp"/>
 
         <Button
             android:id="@+id/btnZaloguj"
+
+            style="@style/PrimaryButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/SingInNavigation" />
+
+        <Button
+
+            android:id="@+id/btnZarejestruj"
             style="@style/TableButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onBtnClick"
-            android:text="Zaloguj"/>
+            android:text="@string/Zarejestruj"
+            android:textColor="@color/text_common" />
     </LinearLayout>
 
 

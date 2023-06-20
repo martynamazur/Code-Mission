@@ -1,4 +1,6 @@
 <resources>
+
+
     <string name="app_name">CodeMission</string>
     <string name="user">Użytkownik</string>
     <string name="play">Graj</string>
@@ -57,7 +59,7 @@
     <string name="resetPassowrd">Zresetuj hasło</string>
     <string name="headlineChangePassword">Zmień hasło</string>
     <string name="navigationConfirm">Potwierdz</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="errorMessagePickOtherEmail">Istnieje konto powiązane z danych adresem email. Wybierz inny</string>
     <string name="registrationForm">Rejestracja</string>
@@ -109,6 +111,21 @@
     <string name="SettingsHeadlineGoogleAcc">Konto Google</string>
     <string name="SettingsfacebookAcc">Konto Facebook</string>
     <string name="SettingLinkedAccDescription">To są konta społecznościowe, które połączyłeś z kontem CodeMission w celu logowania. Masz możliwość wyłączenia dostępu do tych kont tutaj.</string>
+    <string name="headlineConnectedAcc">Polączone konta</string>
 
+
+
+    <string name="defaultRankings">Rankingi</string>
+    <string name="defaultSeeMore">Więcej</string>
+    <string name="valTotalXP">Zdobyte XP</string>
+    <string name="defaultXPNum">0</string>
+    <string name="valStreakNumber">Streak</string>
+    <string name="defaultStreakNumber">0</string>
+    <string name="valFollowing">Obserwuje</string>
+    <string name="defaultFollowersNumber">Obserwujący 0</string>
+    <string name="defaultAchievements">Osiągnięcia</string>
+    <string name="headlineMore">Więcej</string>
+
+    <string name="web_client_id">469480925344-677a4bhbraecmoq8p1f5q265j2mp81es.apps.googleusercontent.com</string>
 
 </resources>

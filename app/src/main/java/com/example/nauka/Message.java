@@ -6,12 +6,18 @@ public class Message {
     private String header;
     private String content;
     private Date date;
-    private int messageId;
 
-    public Message(String header, String content, Date date) {
+
+
+    private Date expire;
+
+
+    public Message(String header, String content, Date date, Date expire) {
         this.header = header;
         this.content = content;
         this.date = date;
+        this.expire = expire;
+
     }
 
     public Message() {
@@ -42,7 +48,7 @@ public class Message {
         this.date = date;
     }
 
-    public void setMessageId(int messageId) {
-        this.messageId = messageId;
+    public Date getExpire() {
+        return expire;
     }
 }

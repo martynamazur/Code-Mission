@@ -78,6 +78,7 @@ public class Settings extends AppCompatActivity  {
             editor.apply();
 
             Intent intent = new Intent(Settings.this, Zaloguj.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
         );
@@ -116,5 +117,7 @@ public class Settings extends AppCompatActivity  {
                 System.out.println("kolejny debil");
             }
         });
+
+
     }
 }

@@ -20,35 +20,56 @@
             android:id="@+id/textView52"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:text="@string/headlineConnectedAcc"
 
             android:textColor="@color/text_common"
-            android:text="TextView" />
+            android:layout_marginBottom="22dp"
+            android:textSize="14dp" />
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:textColor="@color/text_common"
             android:id="@+id/textView55"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/SettingLinkedAccDescription" />
+            android:layout_marginTop="54dp"
+            android:layout_marginBottom="48dp"
+            android:text="@string/SettingLinkedAccDescription"
+            android:textColor="@color/text_common" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="26dp"
             android:orientation="horizontal">
+
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="match_parent"
+                android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
                 android:layout_weight="1"
+
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+
                 app:srcCompat="@drawable/google" />
 
             <TextView
                 android:id="@+id/textView56"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="@string/SettingsHeadlineGoogleAcc"
                 android:textColor="@color/text_common"
                 android:textSize="14dp" />
@@ -61,26 +82,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-
-            android:layout_weight="1" />
+ />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
+                android:layout_width="36dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/facebook" />
+                app:srcCompat="@drawable/facebook"
+                android:layout_marginRight="12dp"
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+
+                />
 
             <TextView
                 android:id="@+id/textView57"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="@string/SettingsfacebookAcc"
                 android:textColor="@color/text_common"
                 android:textSize="14dp" />

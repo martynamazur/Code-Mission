@@ -230,7 +230,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             message.setHeader(header);
             message.setContent(content);
             message.setDate(date);
-            message.setMessageId(messageId);
+
 
             messages.add(message);
         }

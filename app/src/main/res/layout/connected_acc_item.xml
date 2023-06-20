@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
     android:id="@+id/card_view_abcd"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
 
-    android:layout_marginStart="23dp"
-    android:layout_marginTop="23dp">
+    app:cardBackgroundColor="@android:color/transparent"
+
+    >
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/edit_text_border"
+        >
 
 
         <TextView
@@ -19,6 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="10dp"
+
             android:text="TextView" />
 
         <Button
@@ -26,7 +33,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/UnlinkedAccount" />
+            android:background="@android:color/transparent"
+            android:textColor="@color/primary_button_color"
+            android:text="@string/UnlinkedAccount"
+
+            />
     </LinearLayout>
 
 

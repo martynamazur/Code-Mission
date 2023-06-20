@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.example.nauka.button.ButtonClickSound;
 import com.example.nauka.notification.MyAlarmManager;
 import com.example.nauka.singup.SignUp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainScreenChoice extends AppCompatActivity {
 
@@ -27,17 +29,16 @@ public class MainScreenChoice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        MyAlarmManager myAlarmManager = new MyAlarmManager();
+        //MyAlarmManager myAlarmManager = new MyAlarmManager();
 
         // Wywołanie metody setAlarm()
-        myAlarmManager.setAlarm(this);
+        //myAlarmManager.setAlarm(this);
 
 
         setContentView(R.layout.activity_main1);
         btnZaloguj = findViewById(R.id.btnZaloguj);
         btnZarejestruj = findViewById(R.id.btnZarejestruj);
         buttonClickSound = new ButtonClickSound(this);
-
 
 
 

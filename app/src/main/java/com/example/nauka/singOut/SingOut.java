@@ -2,6 +2,8 @@ package com.example.nauka.singOut;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SingOut {
 
     private Context context;
@@ -18,5 +20,11 @@ public class SingOut {
         editor.clear();
         editor.apply();
 
+        FirebaseAuth.getInstance().signOut();
+
+
+
+
     }
+
 }

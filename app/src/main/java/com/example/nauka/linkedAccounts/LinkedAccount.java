@@ -40,6 +40,7 @@ public class LinkedAccount extends AppCompatActivity {
         AccountInformationModel accountInformationModelGoogle = new AccountInformationModel("test1@gmail.com");
         ArrayList<AccountInformationModel> googleList = new ArrayList<>();
         googleList.add(accountInformationModelGoogle);
+
         googleRcAdapter = new GoogleRcAdapter(LinkedAccount.this, googleList);
         googleRc.setAdapter(googleRcAdapter);
 
